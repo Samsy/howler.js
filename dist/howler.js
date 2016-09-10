@@ -1857,6 +1857,7 @@
         self._node.addEventListener(Howler._canPlayEvent, self._loadFn, false);
 
         // Setup the new audio node.
+        self._node.crossOrigin = 'anonymous';
         self._node.src = parent._src;
         self._node.preload = 'auto';
         self._node.volume = volume * Howler.volume();
